@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Edwin Chau
 description: Personal Page 
 ---
 
