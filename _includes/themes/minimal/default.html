@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include themes/minimal/header.html %}
-  <body>
-    {% include themes/minimal/navbar.html %}
-    <div class="container">
-      {{ content }}
-    </div>
-    {% include themes/minimal/footer.html %}
-    <script src="/js/jquery-3.3.1.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-  </body>
+
+	{% include themes/minimal/header.html %}
+	<head>
+		<link rel="stylesheet" href="/assets/themes/minimal/style.css">
+	</head>
+	<body>
+		{% include themes/minimal/navbar.html %}
+		<div class="container">
+		  {{ content }}
+		</div>
+		{% include themes/minimal/footer.html %}
+		<script src="/js/jquery-3.3.1.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+	</body>
 </html>

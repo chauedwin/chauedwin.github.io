@@ -8,6 +8,10 @@
 
 .navbar .nav {
   float: right; }
+  
+.content{
+	padding: 10px 5px
+}
 
 /* posts index */
 .post > h3.title {
@@ -72,4 +76,22 @@ footer {
 
 a{
 	color:black
+}
+
+.post-list{
+	padding: 15px 5px;
+	border-bottom: 2px solid black;
+}
+
+.post-list-first{
+	padding: 15px 5px;
+}
+
+time{
+	font-style:italic;
+	color: gray;
+}
+
+.page-header{
+	padding: 10px 5px;
 }
