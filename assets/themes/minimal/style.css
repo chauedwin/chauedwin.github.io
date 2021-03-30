@@ -94,4 +94,21 @@ time{
 
 .page-header{
 	padding: 10px 5px;
+	text-align: center;
+}
+
+.pic{
+	float: left;
+	padding: 10px 50px 10px 0px;
+}
+
+footer{
+	padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    line-height: normal;
+    margin: 0;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
 }
