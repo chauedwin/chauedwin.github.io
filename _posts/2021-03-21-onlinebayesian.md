@@ -2,7 +2,7 @@
 layout: post
 title: "Online Bayesian Regression"
 description: ""
-preview: "first post preview!"
+preview: "Bayesian regression solves for the optimal distribution of regression coefficients rather than a deterministic value. This can help avoid overfitting or overly-complex models."
 category: 
 tags: []
 ---
@@ -16,7 +16,7 @@ assumes that these parameters come from a hidden or **latent probability distrib
 clear benefit of incorporating **prior** domain knowledge an individual may have on a given dataset or application. 
 Furthermore, a Bayesian treatment of regression can also help avoid overfitted or overly-complex models, issues that 
 often plague frequentist maximum likelihood methods [Bishop 152]. Let's start with a quick rundown of traditional linear 
-regression.
+regression. For the IPython notebook or code, click [here](https://github.com/chauedwin/BayesianLR).
 
 ### Notation
 
