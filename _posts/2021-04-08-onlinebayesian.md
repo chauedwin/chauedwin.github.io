@@ -3,7 +3,7 @@ layout: post
 title: "Online Bayesian Regression"
 description: ""
 preview: "Online updates for Bayesian regression allow it to scale better with data dimension as well as reduces the amount of running memory required for loading data or data streams."
-category: 
+category: "interesting"
 tags: []
 ---
 {% include JB/setup %}

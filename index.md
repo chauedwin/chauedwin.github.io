@@ -3,16 +3,32 @@ layout: page
 description: Personal Page 
 ---
 
-{% for post in site.posts %}
+## Interesting Posts:
+
+{% for post in site.categories.interesting %}
   <div class="post-list">
     <h2>
       <a href="{{ post.url }}">
         {{ post.title }}
       </a>
     </h2>
-	{{ post.preview }} 
+	{{ post.preview }}
 	<br>
-    <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time>
     
   </div>
 {% endfor %}
+
+<br>
+
+## Some of my artwork!
+
+
+<p align="center">
+  <img src="{{site.baseurl}}/img/hmc.jpg" height=400px>
+</p>
+
+<br>
+
+<p align="center">
+  <img src="{{site.baseurl}}/img/guilin.jpg" height=600px>
+</p>

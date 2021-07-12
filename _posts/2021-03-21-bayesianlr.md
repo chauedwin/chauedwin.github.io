@@ -3,7 +3,7 @@ layout: post
 title: "Bayesian Regression"
 description: ""
 preview: "Bayesian regression solves for the optimal distribution of regression coefficients rather than a deterministic value. The choice of prior can lead to regularization, and the probabilistic framework introduces a predictive distribution for unobserved data."
-category: 
+category: "basic"
 tags: []
 ---
 {% include JB/setup %}
