@@ -11,12 +11,12 @@ tags: []
 ## Bayesian Linear Regression
 
 In this notebook, we explore linear regression under the Bayesian framework. While traditional or frequentist linear 
-regression treats the model parameters(such as the slope and intercept) as **deterministic**, Bayesian linear regression 
-assumes that these parameters come from a hidden or **latent probability distribution**. The Bayesian framework has the 
-clear benefit of incorporating **prior** domain knowledge an individual may have on a given dataset or application. 
+regression treats the model parameters(such as the slope and intercept) as ***deterministic***, Bayesian linear regression 
+assumes that these parameters come from a hidden or ***latent probability distribution***. The Bayesian framework has the 
+clear benefit of incorporating ***prior*** domain knowledge an individual may have on a given dataset or application. 
 Furthermore, a Bayesian treatment of regression can also help avoid overfitted or overly-complex models, issues that 
 often plague frequentist maximum likelihood methods [Bishop 152]. Let's start with a quick rundown of traditional linear 
-regression. For the IPython notebook or code, click [here](https://github.com/chauedwin/BayesianLR).
+regression. For the IPython notebook or code, click **[here](https://github.com/chauedwin/BayesianLR)**.
 
 ### Notation
 
@@ -27,8 +27,8 @@ as upper case bolded letters $$\mathbf{A}$$.
 
 Suppose our data consists of i.i.d. target/response variables $$t_i$$ and corresponding predictor/explanatory variables 
 $\vec{x_i} = (x_{i,0}, x_{i,1}, \ldots, x_{i,N-1})$. Rather than using the original data, it is common to instead use 
-extracted/preprocessed features(see [monomial basis](https://en.wikipedia.org/wiki/Basis_function) and 
-[RBF](https://en.wikipedia.org/wiki/Radial_basis_function) for examples), which we will denote 
+extracted/preprocessed features(see **[monomial basis](https://en.wikipedia.org/wiki/Basis_function)** and 
+**[RBF](https://en.wikipedia.org/wiki/Radial_basis_function)** for examples), which we will denote 
 $$ \vec{\phi_i} = \left(\phi_0(\vec{x_i}), \phi_1(\vec{x_i}), \ldots, \phi_{M-1}(\vec{x_i})\right) $$. 
 We then assume that $$ t_i $$ has a linear relationship with $$ \vec{\phi_i} $$. Adding random noise $$ \epsilon_i $$, we have
 
@@ -87,7 +87,7 @@ $$\begin{align}
     t_i \sim \mathcal{N}\left(\vec{w}^T\vec{\phi_i}, \beta^{-1}\right) \quad \text{or} \quad p\left(t_i \Big| \vec{w}^T\vec{\phi_i}, \beta^{-1}\right) = \mathcal{N}\left(\vec{w}^T\vec{\phi_i}, \beta^{-1}\right)
 \end{align}$$
 
-We can then write the **likelihood function** and log-likelihood function as a product of the individual 
+We can then write the ***likelihood function*** and log-likelihood function as a product of the individual 
 likelihoods/log-likelihoods due to independence 
 
 $$\begin{align}
@@ -96,8 +96,8 @@ $$\begin{align}
     \log L(\vec{w}) &= -\frac{N}{2}\log(2\pi) + \frac{N}{2}\log(\beta) - \frac{\beta}{2}\displaystyle\sum_{n = 1}^{N}\left(t_n - \vec{w}^T\vec{\phi_i}\right)^2
 \end{align}$$
 
-**Maximizing** the log-likelihood is the same as minimizing the likelihood, so taking the gradient with 
-respect to $$ \vec{w} $$ and setting to zero yields the famous **normal equations**, 
+***Maximizing*** the log-likelihood is the same as minimizing the likelihood, so taking the gradient with 
+respect to $$ \vec{w} $$ and setting to zero yields the famous ***normal equations***, 
 
 $$\begin{align}
     \nabla_\vec{w} \log L(\vec{w}) &= - \beta\sum_{n = 1}^{N} \left(t_n - \vec{w}^T \vec{\phi_n}\right) \vec{\phi_n}^T = 0 \newline
@@ -105,7 +105,7 @@ $$\begin{align}
 \end{align}$$
 
 where $$ \mathbf{\Phi} = \left(\vec{\phi_0}, \vec{\phi_1}, \ldots, \vec{\phi_N}\right)^T $$ is often referred to 
-as the **design matrix**.
+as the ***design matrix***.
 
 ___
 
@@ -127,13 +127,13 @@ ___
 ___
 
 <p align="center">
-  <img src="{{site.baseurl}}/img/blr1.png">
+  <img src="{{site.baseurl}}/img/blr/blr1.png">
 </p>
 
 ### Bayesian Treatment
 
 Bayesian linear regression follows the same setup as the frequentist framework, except that we now assume 
-that $$ \vec{w} $$ belongs to a **prior** distribution. It turns out that because the likelihood function 
+that $$ \vec{w} $$ belongs to a ***prior*** distribution. It turns out that because the likelihood function 
 $$ L(\vec{w}) $$ is the exponential of a quadratic function of $$ \vec{w} $$, this prior is a multivariate Gaussian 
 distribution [Bishop 152]
 
@@ -171,7 +171,7 @@ $$\begin{align}
     \mathbf{S}_N^{-1} &= \mathbf{S}_0^{-1} + \beta \mathbf{\Phi}^T\mathbf{\Phi}
 \end{align}$$
 
-Rather than maximizing the likelihood, we instead maximize the posterior, or **maximum a posteriori(MAP)** (which is actually equivalent to MLE if the prior is constant or uniform). In the case of a Gaussian posterior distribution, the mode coincides with the mean, thus 
+Rather than maximizing the likelihood, we instead maximize the posterior, or ***maximum a posteriori(MAP)*** (which is actually equivalent to MLE if the prior is constant or uniform). In the case of a Gaussian posterior distribution, the mode coincides with the mean, thus 
 
 $$\begin{align}
     \vec{w}_{MAP} = \vec{m}_N
@@ -214,12 +214,12 @@ ___
 ___
 
 <p align="center">
-  <img src="{{site.baseurl}}/img/blr2.png">
+  <img src="{{site.baseurl}}/img/blr/blr2.png">
 </p>
 
 The fitted Bayesian model is almost identical to the frequentist model in this simple regression case. This is because we considered a 
-zero-mean **isotropic prior**(where $$m_0 = 0$$ and $$S_0 = \alpha^{-1} I$$ for some constant $$\alpha$$), thus maximizing the log-posterior 
-yields an **identical solution** to that of MLE(with an added regularization term). In other words, if our prior for $$\vec{w}$$ is uninformative, 
+zero-mean ***isotropic prior***(where $$m_0 = 0$$ and $$S_0 = \alpha^{-1} I$$ for some constant $$\alpha$$), thus maximizing the log-posterior 
+yields an ***identical solution*** to that of MLE(with an added regularization term). In other words, if our prior for $$\vec{w}$$ is uninformative, 
 Bayesian regression reduces to frequentist regression. We will explore this idea further after a quick detour to an online version of Bayesian 
 regression.
 
@@ -307,13 +307,13 @@ $$\begin{align}
 \end{align}$$
 
 <p align="center">
-  <img src="{{site.baseurl}}/img/blr3.png">
+  <img src="{{site.baseurl}}/img/blr/blr3.png">
 </p>
 
 With a relatively strong prior, we can see that the Bayesian model penalizes large coefficients and leads to a relatively simpler model 
 than the frequentist one. We would see a similar effect if we applied ridge regression with $$\lambda = 40$$. 
 
-However, this is all with a prior mean of $$0$$. If we consider a **non-zero mean**, we could attempt to nudge the Bayesian coefficients in a 
+However, this is all with a prior mean of $$0$$. If we consider a ***non-zero mean***, we could attempt to nudge the Bayesian coefficients in a 
 certain direction. Although this effect would most likely be lost with the addition of more data, it is more pronounced during early stages 
 of training when there is fewer data available. Consider the case with the first $$n = 20$$ observations rather than the full $$n = 100$$. We may 
 have reason to believe that the data follows a parabolic shape(a $$2$$ degree polynomial looks similar to a $$4$$ degree polynomial after all). 
@@ -394,5 +394,5 @@ $$\begin{align}
 \end{align}$$
 
 <p align="center">
-  <img src="{{site.baseurl}}/img/blr4.png">
+  <img src="{{site.baseurl}}/img/blr/blr4.png">
 </p>

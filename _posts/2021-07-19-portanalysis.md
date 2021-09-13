@@ -10,7 +10,7 @@ tags: []
 
 The method we will utilize aims to maximize the excess expected return of a portfolio over its volatility. The model and its 
 derivations are based on the approach of 
-[**Elton et al.**](https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.1976.tb03217.x)
+**[Elton et al.](https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.1976.tb03217.x)**
 It is motivated by the single index model, which we will first cover. 
 
 ## Single Index Model
@@ -45,7 +45,7 @@ return (over a risk-free rate) to variance/volatility. Portfolios with very high
 portfolios with too low a rate of return despite stability. 
 
 Before differentiating and solving, however, we need to impose two additional constraints. First, each asset weight $$x_i$$ 
-must be larger than or equal to 0 because we are not allowing short selling. Second, the sum of weights must total to 1, 
+must be larger than or equal to $$0$$ because we are not allowing short selling. Second, the sum of weights must total to 1, 
 as it would not make sense otherwise. Altogether, we have the following optimization problem:
 
 $$\begin{align}
@@ -89,7 +89,7 @@ $$\begin{align}
 \end{align}$$
 
 Moving onto the optimizing, we can also notice that $$\theta$$ is not only 
-[**homogenous**](https://en.wikipedia.org/wiki/Homogeneous_function), but it is homogenous with degree 0. In other words, 
+**[homogenous](https://en.wikipedia.org/wiki/Homogeneous_function)**, but it is homogenous with degree 0. In other words, 
 if we multiply each $$x_i$$ by a factor of $$r$$, this actually does not change the value of $$\theta$$. Thus we can safely 
 ignore the equality constraint(but must still consider the inequality/nonnegative constraints), and our Lagrangian is 
 
@@ -146,12 +146,12 @@ weights of each asset to be included.
 
 It is important to note that the described method assumes that all chosen assets have positive betas. While this may 
 often be true, small tweaks to this process must be made to incorporate assets with negative betas. More details can be 
-found in the paper by Elton et al. [**here**](https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.1976.tb03217.x).
+found in the paper by Elton et al. **[here](https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.1976.tb03217.x)**.
 
 
 ## Data ETL 
 
-To access stock data, we will use the [**yfinance library**](https://github.com/ranaroussi/yfinance) 
+To access stock data, we will use the **[yfinance library](https://github.com/ranaroussi/yfinance)** 
 (one could also scrape prices from a webpage or query them from a database, though formatting may differ). 
 We first download the historical monthly stock prices for the chosen stocks/tickers(slightly modifying the code in the 
 library tutorial). The data comes in the form of a pandas dataframe with multi-level headers, so we also unstack the 
@@ -179,7 +179,7 @@ ___
 ___
 
 <p align="center">
-  <img src="{{site.baseurl}}/img/stocks_raw_output.png">
+  <img src="{{site.baseurl}}/img/portfolioanalysis/stocks_raw_output.png">
 </p>
 
 Since we only want one stock price per month, we filter out the last row of each asset if it does not fall on the first 
@@ -216,7 +216,7 @@ columns. Note that we need to mask the data matrix to ignore NaN values.
 ___ 
 
 <p align="center">
-  <img src="{{site.baseurl}}/img/pivoted_output.png">
+  <img src="{{site.baseurl}}/img/portfolioanalysis/pivoted_output.png">
 </p>
 
 
@@ -251,7 +251,7 @@ ___
 ___
 
 <p align="center">
-  <img src="{{site.baseurl}}/img/simdf_output.png">
+  <img src="{{site.baseurl}}/img/portfolioanalysis/simdf_output.png">
 </p>
 
 ___
@@ -268,5 +268,5 @@ ___
 ___
 
 <p align="center">
-  <img src="{{site.baseurl}}/img/weights_output.png">
+  <img src="{{site.baseurl}}/img/portfolioanalysis/weights_output.png">
 </p>

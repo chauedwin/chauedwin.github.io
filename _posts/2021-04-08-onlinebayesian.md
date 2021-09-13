@@ -80,7 +80,7 @@ ___
 
 ### Online Bayesian Regression
 
-Large datasets often face computational and memory limitations, both of which motivate an **online** or **sequential** update scheme. Similar to 
+Large datasets often face computational and memory limitations, both of which motivate an ***online*** or ***sequential*** update scheme. Similar to 
 stochastic gradient descent for frequentist regression, the online version of Bayesian regression not only allows model parameters to be updated 
 without keeping the entire dataset in memory/storage, but also increases computational efficiency of the training/fitting process. The update rules 
 can be derived as follows.  
@@ -147,5 +147,5 @@ ___
 ___
 
 <p align="center">
-  <img src="{{site.baseurl}}/img/olr1.png">
+  <img src="{{site.baseurl}}/img/obr/obr/obr1.png">
 </p>
