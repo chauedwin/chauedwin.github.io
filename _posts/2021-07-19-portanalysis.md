@@ -11,7 +11,8 @@ tags: []
 The method we will utilize aims to maximize the excess expected return of a portfolio over its volatility. The model and its 
 derivations are based on the approach of 
 **[Elton et al.](https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.1976.tb03217.x)**
-It is motivated by the single index model, which we will first cover. 
+It is motivated by the single index model, which we will first cover. The **[IPython notebook](https://github.com/chauedwin/PortfolioAnalysis/blob/main/PortfolioAnalysis.ipynb)** 
+and **[code](https://github.com/chauedwin/PortfolioAnalysis/blob/main/pipeline.py)** are both available.
 
 ## Single Index Model
 

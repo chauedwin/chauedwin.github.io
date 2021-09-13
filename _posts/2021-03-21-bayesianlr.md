@@ -16,7 +16,7 @@ assumes that these parameters come from a hidden or ***latent probability distri
 clear benefit of incorporating ***prior*** domain knowledge an individual may have on a given dataset or application. 
 Furthermore, a Bayesian treatment of regression can also help avoid overfitted or overly-complex models, issues that 
 often plague frequentist maximum likelihood methods [Bishop 152]. Let's start with a quick rundown of traditional linear 
-regression. For the IPython notebook or code, click **[here](https://github.com/chauedwin/BayesianLR)**.
+regression. Both the **[IPython notebook](https://github.com/chauedwin/BayesianLR/blob/master/BayesianLR.ipynb)** and **[code](https://github.com/chauedwin/BayesianLR/blob/master/BayesianLR.py)** are available.
 
 ### Notation
 

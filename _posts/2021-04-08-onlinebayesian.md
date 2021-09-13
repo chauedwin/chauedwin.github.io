@@ -10,6 +10,8 @@ tags: []
 
 ## Bayesian Regression Review
 
+Both the [IPython notebook](https://github.com/chauedwin/BayesianLR/blob/master/OnlineBayesLR.ipynb) and [code](https://github.com/chauedwin/BayesianLR/blob/master/OnlineBayesLR.py) are available. 
+
 Recall that our regression coefficients $$\vec{w}$$ come from a prior distribution 
 
 $$\begin{align}
